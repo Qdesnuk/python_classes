@@ -3,10 +3,23 @@ class Person:
         self.name = name
         self.job = job
         self.pay = pay
+        
+    def lastName(self):
+        return self.name.split()[-1]
 
-bob = Person("Bob Smith")
-sue = Person("Sue Jones", job='dev', pay=100000)
-due = Person("Due Jones", job='dev', pay=1000000)
+    def giveRaise(self, percent):
+        self.pay = int(self.pay * (1 + percent))
+
+    def __repr__(self) -> str:
+        return 'Person: %s, %s' % (self.name, self.pay)
+
+
 
 if __name__=='__main__':
-    pass
+    bob = Person("Bob Smith")
+    sue = Person("Sue Jones", job='dev', pay=100000)
+    print(bob)
+    print(sue)
+    print(bob.lastName(), sue.lastName())
+    sue.giveRaise(.10)
+    print(sue.pay)
