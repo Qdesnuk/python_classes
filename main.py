@@ -19,10 +19,15 @@ class Manager(Person):
 
 
 if __name__=='__main__':
-    bob = Person("Bob Smith")
-    sue = Person("Sue Jones", job='dev', pay=100000)
-    print(bob)
-    print(sue)
-    print(bob.lastName(), sue.lastName())
-    sue.giveRaise(.10)
-    print(sue.pay)
+    # bob = Person("Bob Smith")
+    # sue = Person("Sue Jones", job='dev', pay=100000)
+    # print(bob)
+    # print(sue)
+    # print(bob.lastName(), sue.lastName())
+    # sue.giveRaise(.10)
+    # print(sue.pay)
+    
+    from number import Number
+    x = Number(5)
+    y = x - 2
+    print(y.data)
